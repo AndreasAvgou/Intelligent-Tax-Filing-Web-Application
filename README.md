@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #  Intelligent Tax Filing Assistant
 
 This is the front-end component of the **Intelligent Tax Filing Web Application**, a sophisticated platform designed to provide AI-driven tax assistance[cite: 2, 3]. Built with **React** and **Vite**, this application focuses on delivering a seamless, responsive, and user-friendly experience[cite: 3, 13].
@@ -74,3 +75,6 @@ Once the installation is complete, you can start the development server:
 npm run dev
 ```
 The application will be accessible at `http://localhost:5173`. You can now interact with the Intelligent Tax Filing Assistant directly from your browser.   
+=======
+# Intelligent Tax Filing Web Application
+>>>>>>> e414f7efdf1bad9719becc5f0b7ffc494db7c34d
