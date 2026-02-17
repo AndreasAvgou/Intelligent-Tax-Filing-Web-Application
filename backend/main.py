@@ -9,10 +9,10 @@ import os
 
 app = FastAPI(title="Intelligent Tax Assistant API")
 
-# Ρυθμίσεις CORS (Χρήσιμο κυρίως για το development)
+# Ρυθμίσεις CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"], # Επιτρέπουμε όλες τις προελεύσεις για το Docker deployment
+    allow_origins=["*"], 
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -35,10 +35,9 @@ async def calculate(data: TaxRequest):
         print(f"Server Error: {str(e)}")
         raise HTTPException(status_code=500, detail="Internal Server Error")
 
-# --- ΠΡΟΣΘΗΚΗ ΓΙΑ ΤΟ ΕΝΙΑΙΟ DOCKERFILE ---
 
 # 2. Σερβίρισμα των στατικών αρχείων (JS, CSS, Images) του React
-# Τα αρχεία αυτά παράγονται από το 'npm run build' και αντιγράφονται στον φάκελο static
+
 if os.path.exists("static/assets"):
     app.mount("/assets", StaticFiles(directory="static/assets"), name="assets")
 

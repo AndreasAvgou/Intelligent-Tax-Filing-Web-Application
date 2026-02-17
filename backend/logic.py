@@ -1,5 +1,5 @@
 def calculate_salary_logic(gross_monthly: float, sector: str, children: int, is_married: bool):
-    # 1. Προσδιορισμός Μηνών (Kariera Style)
+    # 1. Προσδιορισμός Μηνών 
     months = 14 if sector == "private" else 12
     annual_gross = gross_monthly * months
     
@@ -10,7 +10,7 @@ def calculate_salary_logic(gross_monthly: float, sector: str, children: int, is_
     
     # 3. Υπολογισμός Αφορολόγητου
     tax_free_base = 8636
-    # Προσαύξηση βάσει παιδιών (Κλίμακα 2024-2026)
+    # Προσαύξηση βάσει παιδιών 
     child_bonuses = {0: 0, 1: 1000, 2: 2000, 3: 3000, 4: 4000}
     tax_free_limit = tax_free_base + child_bonuses.get(children, children * 1000)
     

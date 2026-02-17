@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 # Φορτώνει τις μεταβλητές από το .env αρχείο για ασφάλεια
 load_dotenv()
 
-# Αρχικοποίηση του client - Κρίσιμο για το Docker deployment [cite: 2026-01-12]
+# Αρχικοποίηση του client
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 def get_ai_advice(results: dict, lang: str = "el"):
@@ -34,7 +34,7 @@ def get_ai_advice(results: dict, lang: str = "el"):
         [Greek advice text] ### [English advice text]
         """
 
-        # 3. Κλήση στο GPT-4o (Google First προσέγγιση για ταχύτητα) [cite: 2026-01-13]
+        # 3. Κλήση στο GPT-4o
         response = client.chat.completions.create(
             model="gpt-4o",
             messages=[
@@ -45,7 +45,7 @@ def get_ai_advice(results: dict, lang: str = "el"):
             temperature=0.7
         )
         
-        # Επιστρέφει π.χ.: "Εξετάστε ιδιωτική ασφάλιση ### Consider private insurance"
+        
         return response.choices[0].message.content
 
     except Exception as e:
