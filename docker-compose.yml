@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: intelligent-tax-assistant
+    ports:
+      - "8000:8000"
+    env_file:
+      - ./backend/.env
+    restart: always

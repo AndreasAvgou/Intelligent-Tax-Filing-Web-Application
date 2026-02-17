@@ -20,6 +20,7 @@ i18n
           "formDesc": "Enter your monthly or annual salary for analysis.",
           "grossSalaryLabel": "Monthly Gross (€)",
           "annualGrossLabel": "Annual Gross (€)",
+          "estimatedNetLabel": "Estimated Net",
           "sectorLabel": "Sector of Employment",
           "privateSector": "Private",
           "publicSector": "Public",
@@ -32,11 +33,14 @@ i18n
 
           // Results Section
           "resultsTitle": "Analysis Results",
+          "resultsDesc": "Analysis of your net earnings",
           "annualGross": "Annual Gross",
           "annualNet": "Annual Net",
           "annualTax": "Annual Tax",
           "monthlyNet": "Monthly Net",
+          "monthlyNetDesc": "The amount that will be deposited into your account every month.",
           "aiTitle": "Intelligent Advice",
+          "aiStrategyLabel": "Advice", // <-- ΠΡΟΣΘΗΚΗ
           "aiDefault": "Analysis complete. Consult your accountant for details.",
 
           // Notifications & Errors
@@ -60,6 +64,7 @@ i18n
           "formDesc": "Εισάγετε τον μηνιαίο ή ετήσιο μισθό σας για ανάλυση.",
           "grossSalaryLabel": "Μηνιαία Μεικτά (€)",
           "annualGrossLabel": "Ετήσια Μεικτά (€)",
+          "estimatedNetLabel": "Εκτίμηση Καθαρού",
           "sectorLabel": "Τομέας Απασχόλησης",
           "privateSector": "Ιδιωτικός",
           "publicSector": "Δημόσιος",
@@ -72,11 +77,14 @@ i18n
 
           // Ενότητα Αποτελεσμάτων
           "resultsTitle": "Αποτελέσματα Ανάλυσης",
+          "resultsDesc": "Η ανάλυση των καθαρών σας αποδοχών",
           "annualGross": "Μεικτά Ετήσια",
           "annualNet": "Καθαρά Ετήσια",
           "annualTax": "Ετήσιος Φόρος",
           "monthlyNet": "Μηνιαία Καθαρά",
+          "monthlyNetDesc": "Το ποσό που θα μπαίνει στο λογαριασμό σας κάθε μήνα.",
           "aiTitle": "Intelligent Advice",
+          "aiStrategyLabel": "Συμβουλή", // <-- ΠΡΟΣΘΗΚΗ
           "aiDefault": "Η ανάλυση ολοκληρώθηκε. Συμβουλευτείτε το λογιστή σας για λεπτομέρειες.",
 
           // Ειδοποιήσεις & Σφάλματα
