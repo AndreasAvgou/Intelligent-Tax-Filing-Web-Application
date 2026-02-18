@@ -1,4 +1,4 @@
-# Intelligent Tax Filing Web Application
+# Intelligent Tax Filing
 
 
 The Intelligent Tax Filing is a sophisticated full-stack web application designed to provide AI-driven tax assistance. It leverages modern frameworks and generative AI to offer users personalized tax advice based on their financial data.

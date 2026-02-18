@@ -9,6 +9,19 @@ i18n
     resources: {
       en: {
         translation: {
+          // --- HOME PAGE (ΠΡΟΣΘΗΚΗ) ---
+          "aiPowered": "NEXT-GEN AI ANALYSIS",
+          "homeTitle": "Intelligent Tax Filing",
+          "homeDesc": "The most sophisticated platform for Greek tax assistance. Bridge the gap between complex legislation and your net income with our GPT-4o powered engine.",
+          "getStarted": "Start Calculating",
+          "featAccuracy": "Accuracy",
+          "featAccuracyDesc": "Calculations based on the latest 2026 tax laws.",
+          "featSpeed": "AI Power",
+          "featSpeedDesc": "Personalized strategies generated instantly by OpenAI GPT-4o.",
+          "featBilingual": "Bilingual",
+          "featBilingualDesc": "Native support for Greek and English language seamlessly.",
+          "navHome": "Home",
+
           // General
           "appTitle": "Intelligent Tax Filing",
           "appSubtitle": "Smart analysis of gross and net earnings.",
@@ -40,7 +53,7 @@ i18n
           "monthlyNet": "Monthly Net",
           "monthlyNetDesc": "The amount that will be deposited into your account every month.",
           "aiTitle": "Intelligent Advice",
-          "aiStrategyLabel": "Advice", // <-- ΠΡΟΣΘΗΚΗ
+          "aiStrategyLabel": "Advice",
           "aiDefault": "Analysis complete. Consult your accountant for details.",
 
           // Notifications & Errors
@@ -53,6 +66,19 @@ i18n
       },
       el: {
         translation: {
+          // --- HOME PAGE (ΠΡΟΣΘΗΚΗ) ---
+          "aiPowered": "ΕΞΥΠΝΗ ΦΟΡΟΛΟΓΙΚΗ ΑΝΑΛΥΣΗ",
+          "homeTitle": "Έξυπνη Φορολογική Ανάλυση",
+          "homeDesc": "Η πιο εξελιγμένη πλατφόρμα για την υποστήριξη των φορολογικών σας δηλώσεων. Γεφυρώστε το χάσμα μεταξύ της περίπλοκης νομοθεσίας και του καθαρού σας εισοδήματος με τη δύναμη του GPT-4o.",
+          "getStarted": "Ξεκινήστε τον Υπολογισμό",
+          "featAccuracy": "Ακρίβεια",
+          "featAccuracyDesc": "Υπολογισμοί βασισμένοι στην τρέχουσα νομοθεσία για ιδιωτικό και δημόσιο τομέα.",
+          "featSpeed": "Ταχύτητα AI",
+          "featSpeedDesc": "Λάβετε φορολογικές συμβουλές ακαριαία χάρη στο μοντέλο GPT-4o.",
+          "featBilingual": "Δίγλωσσο",
+          "featBilingualDesc": "Πλήρης υποστήριξη Ελληνικών και Αγγλικών σε όλη την εμπειρία χρήσης.",
+          "navHome": "Αρχική",
+
           // Γενικά
           "appTitle": "Έξυπνη Φορολογική Ανάλυση",
           "appSubtitle": "Έξυπνη ανάλυση μεικτών και καθαρών αποδοχών.",
@@ -84,7 +110,7 @@ i18n
           "monthlyNet": "Μηνιαία Καθαρά",
           "monthlyNetDesc": "Το ποσό που θα μπαίνει στο λογαριασμό σας κάθε μήνα.",
           "aiTitle": "Intelligent Advice",
-          "aiStrategyLabel": "Συμβουλή", // <-- ΠΡΟΣΘΗΚΗ
+          "aiStrategyLabel": "Συμβουλή",
           "aiDefault": "Η ανάλυση ολοκληρώθηκε. Συμβουλευτείτε το λογιστή σας για λεπτομέρειες.",
 
           // Ειδοποιήσεις & Σφάλματα
