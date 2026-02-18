@@ -33,7 +33,7 @@ jobs:
         # Χρησιμοποιούμε σκέτο pytest στον φάκελο tests για να τα βρει όλα αυτόματα
         python -m pytest tests/
 
-    - name: Build and Run Containers (Step 5.2)
+    - name: Build and Run Containers
       run: |
         touch backend/.env
         echo "OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }} ">> backend/.env
