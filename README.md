@@ -1,5 +1,5 @@
 # Intelligent Tax Filing
-[![CI Pipeline](https://github.com/AndreasAvgou/Intelligent-Tax-Filing-Web-Application/actions/workflows/main.yml/badge.svg)](https://github.com/AndreasAvgou/Intelligent-Tax-Filing-Web-Application/actions)
+
 
 The Intelligent Tax Filing is a sophisticated full-stack web application designed to provide AI-driven tax assistance. It leverages modern frameworks and generative AI to offer users personalized tax advice based on their financial data.
 
