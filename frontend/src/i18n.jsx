@@ -15,7 +15,7 @@ i18n
           "homeDesc": "The most sophisticated platform for Greek tax assistance. Bridge the gap between complex legislation and your net income with our AI powered engine.",
           "getStarted": "Start Calculating",
           "featAccuracy": "Accuracy",
-          "featAccuracyDesc": "Calculations based on the latest 2026 tax laws.",
+          "featAccuracyDesc": "Calculations based on the latest tax laws.",
           "featSpeed": "Speed",
           "featSpeedDesc": "Personalized strategies generated instantly by OpenAI.",
           "featBilingual": "Bilingual",
