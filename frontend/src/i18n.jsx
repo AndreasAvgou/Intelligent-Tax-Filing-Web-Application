@@ -10,14 +10,14 @@ i18n
       en: {
         translation: {
           // --- HOME PAGE (ΠΡΟΣΘΗΚΗ) ---
-          "aiPowered": "NEXT-GEN AI ANALYSIS",
+          "aiPowered": "Intelligent Tax Filing",
           "homeTitle": "Intelligent Tax Filing",
-          "homeDesc": "The most sophisticated platform for Greek tax assistance. Bridge the gap between complex legislation and your net income with our GPT-4o powered engine.",
+          "homeDesc": "The most sophisticated platform for Greek tax assistance. Bridge the gap between complex legislation and your net income with our AI powered engine.",
           "getStarted": "Start Calculating",
           "featAccuracy": "Accuracy",
           "featAccuracyDesc": "Calculations based on the latest 2026 tax laws.",
-          "featSpeed": "AI Power",
-          "featSpeedDesc": "Personalized strategies generated instantly by OpenAI GPT-4o.",
+          "featSpeed": "Speed",
+          "featSpeedDesc": "Personalized strategies generated instantly by OpenAI.",
           "featBilingual": "Bilingual",
           "featBilingualDesc": "Native support for Greek and English language seamlessly.",
           "navHome": "Home",
@@ -67,14 +67,14 @@ i18n
       el: {
         translation: {
           // --- HOME PAGE (ΠΡΟΣΘΗΚΗ) ---
-          "aiPowered": "ΕΞΥΠΝΗ ΦΟΡΟΛΟΓΙΚΗ ΑΝΑΛΥΣΗ",
+          "aiPowered": "Έξυπνη Φορολογική Ανάλυση",
           "homeTitle": "Έξυπνη Φορολογική Ανάλυση",
-          "homeDesc": "Η πιο εξελιγμένη πλατφόρμα για την υποστήριξη των φορολογικών σας δηλώσεων. Γεφυρώστε το χάσμα μεταξύ της περίπλοκης νομοθεσίας και του καθαρού σας εισοδήματος με τη δύναμη του GPT-4o.",
+          "homeDesc": "Η πιο εξελιγμένη πλατφόρμα για την υποστήριξη των φορολογικών σας δηλώσεων. Γεφυρώστε το χάσμα μεταξύ της περίπλοκης νομοθεσίας και του καθαρού σας εισοδήματος με τη δύναμη της τεχνητής νοημοσύνης.",
           "getStarted": "Ξεκινήστε τον Υπολογισμό",
           "featAccuracy": "Ακρίβεια",
           "featAccuracyDesc": "Υπολογισμοί βασισμένοι στην τρέχουσα νομοθεσία για ιδιωτικό και δημόσιο τομέα.",
-          "featSpeed": "Ταχύτητα AI",
-          "featSpeedDesc": "Λάβετε φορολογικές συμβουλές ακαριαία χάρη στο μοντέλο GPT-4o.",
+          "featSpeed": "Ταχύτητα",
+          "featSpeedDesc": "Λάβετε φορολογικές συμβουλές ακαριαία χάρη στο μοντέλο της τεχνητής νοημοσύνης.",
           "featBilingual": "Δίγλωσσο",
           "featBilingualDesc": "Πλήρης υποστήριξη Ελληνικών και Αγγλικών σε όλη την εμπειρία χρήσης.",
           "navHome": "Αρχική",
