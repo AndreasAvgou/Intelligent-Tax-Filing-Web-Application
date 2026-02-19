@@ -17,16 +17,16 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# 1. Endpoint για τους υπολογισμούς
+# Endpoint
 @app.post("/api/calculate", response_model=TaxResponse)
 async def calculate(data: TaxRequest):
     try:
-        # Μαθηματικοί υπολογισμοί
+        # Υπολογισμοί
         results = calculate_salary_logic(
             data.gross_salary, data.sector, data.children, data.is_married
         )
         
-        # Κλήση AI με τη γλώσσα που ήρθε από το frontend
+        # Κλήση AI
         ai_insight = get_ai_advice(results, lang=data.lang)
             
         return {**results, "ai_advice": ai_insight}
@@ -36,19 +36,17 @@ async def calculate(data: TaxRequest):
         raise HTTPException(status_code=500, detail="Internal Server Error")
 
 
-# 2. Σερβίρισμα των στατικών αρχείων (JS, CSS, Images) του React
+# Σερβίρισμα των στατικών αρχείων React
 
 if os.path.exists("static/assets"):
     app.mount("/assets", StaticFiles(directory="static/assets"), name="assets")
 
-# 3. Catch-all route για να φορτώνει το React App σε κάθε URL
+# Catch-all route
 @app.get("/{full_path:path}")
 async def serve_react(full_path: str):
-    # Αν η διαδρομή ξεκινάει με 'api', αφήνουμε το FastAPI να επιστρέψει 404 αν δεν υπάρχει το endpoint
     if full_path.startswith("api"):
         raise HTTPException(status_code=404, detail="API endpoint not found")
     
-    # Για όλες τις άλλες διαδρομές, στέλνουμε το index.html του React
     index_path = os.path.join("static", "index.html")
     if os.path.exists(index_path):
         return FileResponse(index_path)
@@ -57,5 +55,5 @@ async def serve_react(full_path: str):
 
 if __name__ == "__main__":
     import uvicorn
-    # Χρησιμοποιούμε 0.0.0.0 για να είναι προσβάσιμο μέσα από το Docker
+    # Προσβάσιμο μέσα από το Docker
     uvicorn.run(app, host="0.0.0.0", port=8000)

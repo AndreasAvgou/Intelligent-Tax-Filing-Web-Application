@@ -7,6 +7,5 @@ from main import app
 client = TestClient(app)
 
 def test_health_check():
-    """Επιβεβαιώνει ότι το API είναι online"""
     response = client.get("/")
     assert response.status_code in [200, 404]

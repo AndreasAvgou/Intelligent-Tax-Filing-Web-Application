@@ -50,5 +50,5 @@ def get_ai_advice(results: dict, lang: str = "el"):
 
     except Exception as e:
         print(f"AI Error: {e}")
-        # Επιστροφή σφάλματος και στις δύο γλώσσες για να μην "σπάει" το UI split
+        # Επιστροφή σφάλματος 
         return "Η AI συμβουλή δεν είναι διαθέσιμη. ### AI advice is currently unavailable."

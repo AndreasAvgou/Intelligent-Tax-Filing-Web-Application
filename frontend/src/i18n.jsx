@@ -9,7 +9,7 @@ i18n
     resources: {
       en: {
         translation: {
-          // --- HOME PAGE (ΠΡΟΣΘΗΚΗ) ---
+          // HOME PAGE
           "aiPowered": "Intelligent Tax Filing",
           "homeTitle": "Intelligent Tax Filing",
           "homeDesc": "The most sophisticated platform for Greek tax assistance. Bridge the gap between complex legislation and your net income with our AI powered engine.",
@@ -66,7 +66,7 @@ i18n
       },
       el: {
         translation: {
-          // --- HOME PAGE (ΠΡΟΣΘΗΚΗ) ---
+          // Αρχική Σελίδα
           "aiPowered": "Έξυπνη Φορολογική Ανάλυση",
           "homeTitle": "Έξυπνη Φορολογική Ανάλυση",
           "homeDesc": "Η πιο εξελιγμένη πλατφόρμα για την υποστήριξη των φορολογικών σας δηλώσεων. Γεφυρώστε το χάσμα μεταξύ της περίπλοκης νομοθεσίας και του καθαρού σας εισοδήματος με τη δύναμη της τεχνητής νοημοσύνης.",

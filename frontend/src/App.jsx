@@ -19,7 +19,7 @@ function App() {
   const [results, setResults] = useState(null)
   const [darkMode, setDarkMode] = useState(false)
 
-  // --- ΠΡΟΣΘΗΚΗ: State για την πλοήγηση μεταξύ Home και Calculator ---
+  // State πλοήγησης Home/Calculator
   const [view, setView] = useState("home")
 
   const [formData, setFormData] = useState({
@@ -30,7 +30,7 @@ function App() {
     isMarried: false
   })
 
-  // --- Βοηθητική συνάρτηση για format 1.000,00 (Ευρωπαϊκό πρότυπο) ---
+  // --- Βοηθητική συνάρτηση για format 1.000,00 ---
   const formatAmount = (num) => {
     if (num === undefined || num === null || isNaN(num)) return "0,00";
     return new Intl.NumberFormat('el-GR', {
@@ -39,7 +39,7 @@ function App() {
     }).format(num);
   };
 
-  // --- ΠΡΟΣΘΗΚΗ: Υπολογισμός αφορολόγητου σε πραγματικό χρόνο για το UI ---
+  // Υπολογισμός αφορολόγητου σε πραγματικό χρόνο
   const calculateTaxFree = () => {
     let base = 8636;
     let bonus = (parseInt(formData.children) || 0) * 1000;
@@ -48,13 +48,13 @@ function App() {
   };
   const currentTaxFree = calculateTaxFree();
 
-  // --- ΠΡΟΣΘΗΚΗ: Υπολογισμός "Live" Καθαρού Μηνιαίου για τη φόρμα ---
+  // Υπολογισμός Καθαρού Μηνιαίου
   const calculateLiveNet = () => {
     const gross = parseFloat(formData.grossSalary) || 0;
     if (gross <= 0) return "0.00";
-    // Προσέγγιση: Μεικτά - ΕΦΚΑ (13.87%) - Φόρος (περίπου 9% πάνω από το αφορολόγητο)
+    // Μεικτά - ΕΦΚΑ (13.87%) - Φόρος
     const afterEfka = gross * (1 - 0.1387);
-    const taxFreeMonthly = 720; // Κατά προσέγγιση 8636 / 12
+    const taxFreeMonthly = 720;
     let tax = 0;
     if (afterEfka > taxFreeMonthly) tax = (afterEfka - taxFreeMonthly) * 0.09;
     return (afterEfka - tax).toFixed(2);
@@ -70,7 +70,7 @@ function App() {
     }
   }, [darkMode])
 
-  // Αυτόματος υπολογισμός Ετήσιου/Μηνιαίου όταν αλλάζει ο τομέας ή ο μισθός
+  // Αυτόματος υπολογισμός Ετήσιου/Μηνιαίου
   const updateSalaries = (value, type, currentSector) => {
     const months = currentSector === "private" ? 14 : 12
     if (type === "monthly") {
@@ -104,7 +104,7 @@ function App() {
           sector: formData.sector,
           children: parseInt(formData.children),
           is_married: formData.isMarried,
-          lang: i18n.language // <-- ΠΡΟΣΘΗΚΗ: Στέλνουμε τη γλώσσα (el ή en)
+          lang: i18n.language // (el ή en)
         }),
       })
 
@@ -124,9 +124,8 @@ function App() {
     <div className="min-h-screen bg-slate-50 dark:bg-slate-950 transition-colors duration-300 pb-20 relative">
       <Toaster position="top-center" richColors />
 
-      {/* --- TOP BAR (Πάνω Δεξιά) --- */}
       <div className="absolute top-4 right-4 flex gap-2 z-50">
-        {/* ΠΡΟΣΘΗΚΗ: Κουμπί επιστροφής στην αρχική αν είμαστε στον υπολογιστή */}
+        {/* Κουμπί επιστροφής στην αρχική */}
         {view === "calculator" && (
           <Button variant="ghost" size="sm" onClick={() => setView("home")} className="dark:text-slate-300">
             {t("navHome", "Αρχική")}
@@ -141,7 +140,7 @@ function App() {
         </Button>
       </div>
 
-      {/* --- ΠΡΟΣΘΗΚΗ: CONDITIONALLY RENDER HOME OR CALCULATOR --- */}
+      {/* RENDER HOME OR CALCULATOR */}
       {view === "home" ? (
         <div className="max-w-4xl mx-auto pt-24 px-4 text-center animate-in fade-in zoom-in duration-700">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold mb-6 uppercase tracking-wider">
@@ -209,7 +208,7 @@ function App() {
             <CardContent className="pt-6">
               <form onSubmit={handleSubmit} className="space-y-6">
 
-                {/* Salary Inputs - 3 ΣΤΗΛΕΣ */}
+                {/* Salary Inputs*/}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   <div className="space-y-2">
                     <Label htmlFor="grossSalary" className="dark:text-slate-200 font-semibold">{t("grossSalaryLabel")}</Label>
@@ -308,7 +307,7 @@ function App() {
             </CardContent>
           </Card>
 
-          {/* --- RESULTS SECTION --- */}
+          {/* RESULTS SECTION */}
           {results && (
             <div className="mt-8 animate-in fade-in slide-in-from-bottom-6 duration-500">
               <Card className="border-2 border-green-500/20 dark:bg-slate-900 shadow-2xl">
@@ -348,11 +347,11 @@ function App() {
                   <div className="rounded-2xl bg-gradient-to-br from-green-600 to-emerald-700 p-6 text-white shadow-lg">
                     <h4 className="font-bold flex items-center gap-2 mb-2 italic">
                       <Sparkles className="h-4 w-4" />
-                      {/* --- ΠΡΟΣΘΗΚΗ: Δυναμικός τίτλος label ΕΔΩ --- */}
+                      {/* Δυναμικός τίτλος label */}
                       {t("aiStrategyLabel")}
                     </h4>
                     <p className="text-sm opacity-90 leading-relaxed">
-                      {/* --- ΠΡΟΣΘΗΚΗ ΛΟΓΙΚΗΣ split ΕΔΩ --- */}
+                      {/* Λογική split */}
                       {results.ai_advice && results.ai_advice.includes("###")
                         ? (i18n.language === 'el'
                           ? results.ai_advice.split("###")[0].trim()

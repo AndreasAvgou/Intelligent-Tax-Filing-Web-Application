@@ -1,4 +1,4 @@
-# --- STAGE 1: Build the React Frontend ---
+# Build the React Frontend
 FROM node:20-alpine AS frontend-build
 WORKDIR /app/frontend
 COPY frontend/package*.json ./
@@ -6,7 +6,7 @@ RUN npm install
 COPY frontend/ .
 RUN npm run build
 
-# --- STAGE 2: Run the FastAPI Backend & Serve Frontend ---
+# Run the FastAPI Backend & Serve Frontend
 FROM python:3.12-slim
 WORKDIR /app
 
@@ -14,13 +14,13 @@ WORKDIR /app
 COPY backend/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy Backend code (main.py, ai_service.py, κλπ.)
+# Copy Backend code
 COPY backend/ .
 
-# Copy the built Frontend files to the backend static folder
+# Copy the built Frontend
 COPY --from=frontend-build /app/frontend/dist ./static
 
-# Expose port 8000 for the unified app
+# Expose port 8000
 EXPOSE 8000
 
 # Run the application
